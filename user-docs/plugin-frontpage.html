@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>AutoWalls-Plugin Front Page</title>
+  <meta name="description" content="Short User overview of features of AutoWalls">
+  <meta name="author" content="Oneric">
+</head>
+
+<body>
+<div class="box p-4 pb-2 project-detail__content" data-user-content="">
+        <div style="text-align:center"><h2><span style="font-size:250%">The Walls</span></h2>
+</div>
+<div style="text-align:center"><p><span style="font-size:250%">- Fully Automatic</span></p>
+</div>
+<div style="text-align:center"><p> <a href="http://dev.bukkit.org/server-mods/thewalls/files" rel="nofollow"><img src="img/arena4.png" alt="http://dev.bukkit.org/media/images/57/404/Download-Half-Size.png" width="500"></a> </p>
+</div>
+<hr>
+<p>This Plugin allows you to play the well-known PvP Game: "The Walls" in fully automatic form. It's created with countless custom settings so that you can  make the game play however you want.  </p>
+<hr>
+<h3>Features</h3>
+<ul><li>Allow you to play "The Walls" fully automated
+</li><li>Multiworld support
+</li><li>Supports multiple Arenas
+</li><li>Many custom Settings
+</li><li>Auto Start
+</li><li>Can create Dungeons and refresh ores
+</li><li>Chests in the middle will be refreshed every round
+</li><li>The Middle and the Walls are protected from : Players, Explosions, Fire and Pistons
+</li><li>The Plugin stops players from  climbing over the Walls if the Walls are high as the max height of this world
+</li><li>Up to 8 groups per Arena
+</li><li>A WorldGenerator to make the setup of an Arena easier
+</li><li>A optional Client-Mod available to create an Arena Base with Bedrock and Soulsand Walls
+</li></ul>
+<hr>
+<h3>Conflicts</h3>
+<ul><li>Any plugin that modifies damage amounts by applying more or less damage, such as MCMMO can sometimes cause issues.
+</li></ul>
+<hr>
+<h3>Requirements</h3>
+<ul><li>A Plugin to protect the Winner-Lobby if the RecreationWay is unequals LOAD
+</li><li>Something to use MultiWorld
+</li><li>To use the world generator your multiworld Plugin must support custom world generators, such as <a href="http://dev.bukkit.org/server-mods/multiverse/" rel="nofollow">Multiverse</a> does
+</li></ul>
+<hr>
+<h2>Commands</h2>
+<p>&lt;...&gt; - required Argument</p>
+<p>[...] - optional Argument</p>
+<h3>Permission: walls.manipulate</h3>
+<ul><li>/walls - Check if the Plugin is installed and gave you a head of me (the Developer)
+</li><li>/wallsCreateArena &lt;ArenaName&gt; &lt;ArenaXWide&gt; &lt;ArenaZWide&gt; &lt;Arena Management Type (BASE or ADVANCED) &gt; &lt;GroupCount&gt; - Create an new Arena in the current world
+</li><li>/wallsDelArena &lt;ArenaName&gt; - Delets this Arena
+</li><li>/wallsReloadArenas - Reload all Arenas, is needed after an Deletion
+</li><li>/wallsReloadConfig - Reloads the config
+</li><li>/wallsArmor &lt;ArmorType&gt; - Let you wear the given Armor set
+</li><li>/wallsEditArena &lt;ArenaName&gt; &lt;Arguement&gt; &lt;NewValue&gt; - Allows you to change Arena Setting InGame.
+</li></ul>
+<dl><dt>IMPORTANT - this must be run at least one time before any walls Round can start !</dt>
+<dd>* / wallsSetReturnPos - Set the Position where Players will be teleported after a game</dd>
+</dl>
+<dl><dt>IMPORTANT You'll need to go to the Winner-Lobby yourself before running these commands</dt>
+<dd>* /wallsBuildArena &lt;ArenanName&gt; [ManagementType] - will recreate the Arena with the given setting or the default setting of the arena if none given</dd>
+</dl>
+<ul><li>/wallsFall &lt;ArenaName&gt; - will remove the Walls from this arena - can be used if the auto removing fails
+</li><li>/wallsSetSpawn &lt;ArenaName&gt; &lt;GroupNumber&gt; - set an spawn in the arena for the given group
+</li><li>/wallsDelSpawn &lt;ArenaName&gt; &lt;GroupNumber&gt; - deletes the specified spawnpoint
+</li><li>/wallsCreateSign &lt;ArenaName&gt;
+</li></ul>
+<h3>Permission: walls.play</h3>
+<ul><li>/wallsJoin &lt;ArenaName&gt; [Group] - you will join the given Arena ( and the given group ) if possible
+</li><li>/wallsArenas - A list of all available Arenas
+</li><li>/wallsLeave - Used to leave a game
+</li><li>/ wallsPlayerList [Arena] - SHows a list of all players in your arena or the given one
+</li></ul>
+<hr>
+<h2>Arena Settings</h2>
+<h3>Management Types</h3>
+<ul><li>BASE : Just copy the default arena. Chest Inventories and other Tile Inventories can't be copied.
+</li><li>ADVANCED : Based off of BASE, but it creates Dungeons and ores with a rarity setting in the config. All Arena-Parts (One Part &lt;-&gt; One Group) are exactly the same at the end
+</li></ul>
+<h3>Recreation Way</h3>
+<ul><li>LOAD : The chunks will be load before they're going to be copied. Note : Extremely SLOW !, Use this only for really big Arenas where TELEPORT is not enough !
+</li><li>TELEPORT : The Winners will be teleported into a special room / Lobby next to the original Arena-Piece while the Arena is recreating. Much Faster then the LOAD. Is the default setting.  
+</li><li>TELEPORT_AND_LOAD : Same then LOAD. The Teleport here is just to give the winners a special room.
+</li></ul>
+<hr>
+<h2>How to set up an Arena</h2>
+<p>Arena setup now located on its own page <a href="http://dev.bukkit.org/server-mods/thewalls/pages/arena-setup/" rel="nofollow">here</a></p>
+<hr>
+<h2>Client Mod - Generator</h2>
+<p>Waiting for an answer from a BukkitDev Moderator if an external link like this is allowed.</p>
+<hr>
+<h2>Config</h2>
+<div><div><pre>config<span>:</span>
+  oneric<span>:</span>
+    walls<span>:</span>
+      settings<span>:</span>
+        general<span>:</span>
+          advancedExplosionProtection<span>:</span> false <span># Does nothing at the moment</span>
+          saveSpawns<span>(</span>How<span>)</span><span>:</span> CONFIG   <span># CONFIG : Spawns for the Groups will be saved in the config ;  FILE:  in an separate folder (One Spawn &lt;-&gt; one file)</span>
+          refreshMiddle<span>:</span> true     <span># sets if the chests in the middle will be restored every round</span>
+          updateIntervall<span>(</span>sec<span>/</span><span>20</span><span>)</span><span>:</span> <span>20</span>  <span># How often a Walls Round updates. Value given in Server ticks are 1/20 sec</span>
+          timeTillRemoveWalls<span>(</span>sec<span>)</span><span>:</span> <span>900</span>   <span># How long it takes till the Walls will be removed after a Round starts </span>
+          minPlayersperGroup<span>:</span> <span>2</span>   <span>#The minimum of players in a Group before a Round starts</span>
+          maxPlayersperGroup<span>:</span> <span>4</span>    <span># The maximum of players in one group</span>
+          returnLocation<span>:</span>    <span># Return Location for dead Walls Players is saved here</span>
+        regenerate<span>:</span>                        
+          dungeons<span>:</span> true  <span># Dungeons shall be created with the setting ADVANCED </span>
+          ores<span>:</span> true   <span># Dungeons shall be created with the setting ADVANCED </span>
+        rarity<span>:</span>
+          ores<span>:</span>     <span># How many of each ore-type shall regenerate, Except Diamond this are all vanilla rarities</span>
+            diamond<span>:</span> <span>0</span>
+            redstone<span>:</span> <span>8</span>
+            gold<span>:</span> <span>2</span>
+            coal<span>:</span> <span>20</span>
+            lapis<span>:</span> <span>2</span>
+            iron<span>:</span> <span>20</span>
+            emerald<span>:</span> <span>0</span>
+          dungeons<span>:</span>  <span># How many of each Dungeon type Should be regenerated          </span>
+            d1<span>:</span> <span>2</span>  <span># d1- dungeons are made with with stone bricks</span>
+            d2<span>:</span> <span>3</span>  <span># d2 - dungeons are made with with clean stone </span>
+        EnableBroadcast<span>:</span> true   <span>#Broadcasts tell you every time a player joins the game</span>
+spawns<span>:</span> <span># Spawns are saved here if you chose CONFIG</span>
+     .....<span>...</span>
+</pre></div>
+</div><hr>
+<h2>Support</h2>
+<p>Have an issue with the plugin? Need help with something? Have an idea to help it out? Place a ticket on the plugin's <a href="http://dev.bukkit.org/bukkit-mods/thewalls/tickets/" rel="nofollow">ticket page!</a></p>
+
+</div>
+
+</body>
+</html>
