@@ -1,0 +1,44 @@
+AutoWalls 0.6.0  2014.02.16
+   - updated to 1.7
+   - changed the command "testWaende" to "wallsFall"
+   - merged Commands "test1" and "test2" to "wallsBuild"
+   - added Sign System (Command: "wallsCreateSign")
+   - added Permission System (walls.manipulate (default: op) and walls.play (default: true) )
+   - lot of inner code changes, to clean up and improve the code
+
+
+AutoWalls 0.5.7  2013.10.05
+   - updated to 1.6.4
+
+
+AutoWalls 0.5.6  2013.07.27
+   - fixed bug : Cannot hurt the enemy (hotfix for 0.5.5)
+
+
+AutoWalls 0.5.5  2013.07.25
+   + added Rewards
+   + Chest-Content will be copied with BASE
+   + added wallsPlayerList Command, to see what Players are currently in an WallsGame
+   -  Can't hit your own team members (Friendly Fire)
+
+
+AutoWalls 0.5.4  2013.07.22
+   - Updated to 1.6.2
+   - Added command to edit Arena Setting InGame
+
+
+AutoWalls 0.5.3  2013.07.02
+   - Updated to 1.6.1
+   - Some better Error Handling and minorbugfixes
+   - Nothing more, I didn't have much time :( , sometimes later in 1.6.1
+
+
+AutoWalls 0.5.2  2013.05.24
+   - Fixed important game-breaking Bug, caused of no config file
+
+
+AutoWalls 0.5.1  2013.05.24
+   - first public release
+   - Minecraft 1.5.2
+   - .
+   - Added fire protection to the Center of the Arena
