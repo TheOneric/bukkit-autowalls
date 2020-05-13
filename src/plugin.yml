@@ -1,0 +1,68 @@
+name: WallsPlugin
+version: 0.6.0
+main: oneric.bukkit.walls.src.WallsPlugin
+author: Oneric aka cmdmole
+website: not yet
+commands:
+     walls:
+          description: Tests the Plugin, heal you and give you the Developer head.
+          usage: <command>
+     wallsArmor:
+          description: Gives you a full set of Armor, Only for OPs.
+          usage: <command> <type>
+     wallsBuildArena:
+          description: recreate an Arena with the given Setting or default one of the arena if none is given
+          usage: <command> <Arena> [ManagementType]
+     wallFall:
+          description: Removes the Walls of the given Arena
+          usage: <command> <Arena>
+     wallsSetSpawn:
+          description: Set a Spawnpoint for a special group in an special Arena
+          usage: <command> <Arena> <groupNumber>
+     wallsDelSpawn:
+          description: Deletes a Spawnpoint for a special group in an special Arena
+          usage: <command> <Arena> <groupNumber>
+     wallsCreateArena:
+          description: Creates a new Arena in the current world
+          usage: <command> <ArenaName> <xWide> <zWide> <ManagemnetType> <groupCount>
+     wallsArenas:
+          description: Show the Names of all Arenas
+          usage: <command>
+     wallsReloadArenas:
+          description: Reload the Arenas
+          usage: <command>
+     wallsDelArena:
+          description: Delete an Arena
+          usage: <command> <ArenaName>
+     wallsJoin:
+          description: You join an WallsArena/Round and if you want it a special group, but only if this is possible
+          usage: <command> <ArenaName> [GroupNumber]
+     wallsReloadConfig:
+          description: reloads the config.
+          usage: <command>
+     wallsSetReturnPos:
+          description: Sets the position where Walls-Players will return when they die/win/leave.
+          usage: <command>
+     wallsLeave:
+          description: Let you leave the current Arena.
+          usage: <command>
+     wallsEditArena:
+          description: Let you edit the Arena Setting.
+          usage: <command> <ArenaName> <ArguementName> <NewValue>
+     wallsPlayerList:
+          description: Show you all active Player in this round. If no round given it will use the Game you are currently in. 
+          usage: <command> [ArenaName]
+     wallsCreateSign:
+          description: Creates an Sign with Informations about the choesen Arena. If you right click it you'll join. 
+          usage: <command> [ArenaName]
+          
+permissions:
+     walls.play:
+          description: Allows you to participate at a 'The Walls' Game
+          default: true
+     walls.manipulate:
+          description: Allows a Player to manipulate, create, or delete Arenas
+          default: op
+          
+         
+          
