@@ -5,7 +5,8 @@ continued to work at least a few years longer. I don't know if/how this still
 works with up-to-date CraftBukkit/Spigot/Sponge or similar.
 
 The last officially released binary build was tested against 
-`CraftBukkit-1.7.2-R0.3`. (iirc)
+`CraftBukkit-1.7.2-R0.3` and should be identicall to the source code used to 
+build the binary 0.6.0 release. (iirc)
 
 # Dev-Bukkit
 The dev-bukkkit page is here, but over the course of several account transfers 
